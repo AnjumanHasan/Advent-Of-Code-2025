@@ -1,2 +1,2 @@
-First : 0, Second : 1Answer is : 1
-Total time taken is : 32113
+Answer is : 17179
+Total time taken is : 6945

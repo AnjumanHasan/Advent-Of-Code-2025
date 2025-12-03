@@ -42,8 +42,9 @@ public class Lobby {
         {
          secondIndex = findMaxIndex(firstIndex+1, line.length()-1, line);
         }
-        int firstDigit = line.charAt(firstIndex);
-        int secondDigit = line.charAt(secondIndex);
+        // out.printf("%d\n , %d \n", firstIndex, secondIndex);
+        int firstDigit = line.charAt(firstIndex) - '0';
+        int secondDigit = line.charAt(secondIndex) - '0';
         return firstDigit*10+secondDigit;
     }
 
