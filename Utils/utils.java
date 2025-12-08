@@ -10,6 +10,8 @@ import java.time.Instant;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+
+
 public class utils {
     public static final String INPUT_FILENAME = "input.txt";
     public static final String OUTPUT_FILENAME = "output.txt";
@@ -54,4 +56,9 @@ public class utils {
         }
         return false;
     }
+
+    // public static void readInputAndSolve()
+    // {
+
+    // }
 }
