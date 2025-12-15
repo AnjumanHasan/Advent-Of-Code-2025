@@ -18,6 +18,7 @@ public class Playground {
             int z = Integer.parseInt(points[2]);
             coords.add(new Point(x, y, z));
             line = bufferedReader.readLine();
+            
         }
         
        } catch (Exception e) {

@@ -9,12 +9,14 @@ import java.nio.file.Paths;
 import java.time.Instant;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.function.Function;
 
 
 
 public class utils {
     public static final String INPUT_FILENAME = "input.txt";
     public static final String OUTPUT_FILENAME = "output.txt";
+    public static int[][] directions = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
     
     public static PrintStream initializeOutputStream() {
         try {
@@ -57,8 +59,23 @@ public class utils {
         return false;
     }
 
-    // public static void readInputAndSolve()
-    // {
+     public static ArrayList<String> getInputLines() throws IOException {
+        BufferedReader reader = initializeBufferedReader();
+        ArrayList<String> lines = new ArrayList<>();
 
-    // }
+        String line = reader.readLine();
+        while (line != null) {
+            lines.add(line);
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return lines;
+    }
+
+    public static <T> T readInputAndSolve(Function<ArrayList<String>, T> processor) throws IOException {
+        ArrayList<String> lines = getInputLines();
+        return processor.apply(lines);
+    }
+
 }
